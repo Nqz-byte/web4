@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Doctology provides clear, accessible and professional information to help users understand our products and services.">
+
+    <title>Doctology</title>
+
+    <link rel="icon" type="image/x-icon" href="image/navyLogo.svg">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!--HEADER / NAVBAR-->
+   <header class="header">
+
+    <!-- Logo -->
+    <div class="header-left">
+        <a href="index.html" class="logo-link">
+            <img src="image/navyLogo.svg" alt="Octology">
+        </a>
+    </div>
+
+
+    <!-- Main Navigation -->
+    <nav class="navbar">
+
+        <a href="index.html" class="nav-link active">
+            <span>⌂</span>
+            Home
+        </a>
+
+        <a href="#about" class="nav-link">
+            <span>ⓘ</span>
+            About
+        </a>
+
+        <a href="#solution" class="nav-link">
+            <span>◈</span>
+            Solutions
+        </a>
+
+        <a href="#how-it-works" class="nav-link">
+            <span>⟲</span>
+            How It Works
+        </a>
+
+        <a href="#resources" class="nav-link">
+            <span>▤</span>
+            Resources
+        </a>
+
+        <a href="#faq" class="nav-link">
+            <span>?</span>
+            FAQ
+        </a>
+
+    </nav>
+
+
+    <!-- Right Navigation -->
+    <div class="header-right">
+
+        <!-- Notification -->
+        <button
+            type="button"
+            class="notification-button"
+            aria-label="Notifications"
+        >
+            <span>♧</span>
+            <i class="notification-badge"></i>
+        </button>
+
+
+        <!-- User Profile -->
+        <div class="profile-wrapper">
+
+            <button
+                type="button"
+                class="profile-button"
+                onclick="toggleProfileMenu()"
+            >
+
+                <div class="profile-avatar">
+                    JD
+                </div>
+
+                <div class="profile-info">
+                    <strong>John Doe</strong>
+                    <small>Administrator</small>
+                </div>
+
+                <span class="profile-arrow">
+                    ▾
+                </span>
+
+            </button>
+
+
+            <!-- Profile Dropdown -->
+            <div
+                class="profile-dropdown"
+                id="profileDropdown"
+            >
+
+                <div class="profile-dropdown-header">
+
+                    <div class="profile-avatar large">
+                        JD
+                    </div>
+
+                    <div>
+                        <strong>John Doe</strong>
+                        <small>john@example.com</small>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-divider"></div>
+
+
+                <a href="dashboard.html" class="profile-menu-item">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="profile.html" class="profile-menu-item">
+                    <span>◉</span>
+                    My Profile
+                </a>
+
+                <a href="settings.html" class="profile-menu-item">
+                    <span>⚙</span>
+                    Settings
+                </a>
+
+
+                <div class="profile-divider"></div>
+
+
+                <a href="logout.html"
+                   class="profile-menu-item logout">
+                    <span>↪</span>
+                    Sign Out
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Mobile Menu -->
+    <button
+        class="menu-toggle"
+        onclick="toggleSidebar()"
+        aria-label="Open navigation"
+    >
+        ☰
+    </button>
+
+    </header>
+
+    <!--  MOBILE SIDEBAR -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+        onclick="toggleSidebar()">
+    </div>
+
+    <aside
+        class="sidebar"
+        id="sidebarMenu"
+        aria-label="Mobile navigation">
+
+        <div class="sidebar-header">
+
+            <img
+                src="image/navyLogo.svg"
+                alt="Doctology Logo"
+                class="sidebar-logo">
+
+            <button
+                type="button"
+                class="sidebar-close"
+                onclick="toggleSidebar()"
+                aria-label="Close navigation menu">
+                ×
+            </button>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#home" class="nav-link" onclick="toggleSidebar()">
+                <span aria-hidden="true">⌂</span>
+                Home
+            </a>
+
+            <a href="#about" class="nav-link" onclick="toggleSidebar()">
+                <span aria-hidden="true">ⓘ</span>
+                About
+            </a>
+
+            <a href="#solutions" class="nav-link" onclick="toggleSidebar()">
+                <span aria-hidden="true">◈</span>
+                Solutions
+            </a>
+
+            <a href="#how-it-works" class="nav-link" onclick="toggleSidebar()">
+                <span aria-hidden="true">⟲</span>
+                How It Works
+            </a>
+
+            <a href="#resources" class="nav-link" onclick="toggleSidebar()">
+                <span aria-hidden="true">▤</span>
+                Resources
+            </a>
+
+            <a href="#faq" class="nav-link" onclick="toggleSidebar()">
+                <span aria-hidden="true">?</span>
+                FAQ
+            </a>
+
+            <a href="#contact" class="sidebar-cta" onclick="toggleSidebar()">
+                Contact Us
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main>
+        <!-- 01. HERO -->
+
+        <section class="hero section" id="home">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <span class="section-label">
+                        WELCOME TO DOCTOLOGY
+                    </span>
+
+                    <h1>
+                        Clear information.
+                        <span>Better understanding.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Discover a clearer and more accessible way to
+                        understand Doctology, its value, and how it can
+                        help you move forward with confidence.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="#about" class="btn btn-primary">
+                            Learn More
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#solutions" class="btn btn-secondary">
+                            Explore Solutions
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Product / Brand Visual -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-card">
+
+                        <div class="hero-card-top">
+                            <span class="hero-dot"></span>
+                            <span class="hero-dot"></span>
+                            <span class="hero-dot"></span>
+                        </div>
+
+                        <div class="hero-card-content">
+
+                            <span class="visual-label">
+                                DOCTOLOGY
+                            </span>
+
+                            <h2>
+                                Information
+                                made clearer.
+                            </h2>
+
+                            <p>
+                                A simple and professional experience
+                                designed around clarity.
+                            </p>
+
+                            <div class="visual-line"></div>
+
+                            <div class="visual-items">
+
+                                <div class="visual-item">
+                                    <span>01</span>
+                                    <p>Clear</p>
+                                </div>
+
+                                <div class="visual-item">
+                                    <span>02</span>
+                                    <p>Accessible</p>
+                                </div>
+
+                                <div class="visual-item">
+                                    <span>03</span>
+                                    <p>Reliable</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 02. TRUST / CREDIBILITY -->
+
+        <section class="trust section">
+
+            <div class="container">
+
+                <div class="trust-heading">
+
+                    <span class="section-label">
+                        AT A GLANCE
+                    </span>
+
+                    <h2>
+                        Built around clarity,
+                        accessibility and trust.
+                    </h2>
+
+                </div>
+
+
+                <div class="trust-grid">
+
+                    <div class="trust-card">
+
+                        <span class="trust-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Clear
+                        </h3>
+
+                        <p>
+                            Information structured in a way
+                            that is easy to understand.
+                        </p>
+
+                    </div>
+
+
+                    <div class="trust-card">
+
+                        <span class="trust-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Accessible
+                        </h3>
+
+                        <p>
+                            Designed to provide a consistent
+                            experience across devices.
+                        </p>
+
+                    </div>
+
+
+                    <div class="trust-card">
+
+                        <span class="trust-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Professional
+                        </h3>
+
+                        <p>
+                            A thoughtful experience designed
+                            around user needs.
+                        </p>
+
+                    </div>
+
+
+                    <div class="trust-card">
+
+                        <span class="trust-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Reliable
+                        </h3>
+
+                        <p>
+                            Information presented with clarity
+                            and confidence.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 03. WHAT IS DOCTOLOGY? -->
+
+        <section class="about section" id="about">
+
+            <div class="container about-container">
+
+                <div class="about-visual">
+
+                    <div class="about-image-placeholder">
+
+                        <span>
+                            DOCTOLOGY
+                        </span>
+
+                        <strong>
+                            Visual / Product Image
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <span class="section-label">
+                        ABOUT DOCTOLOGY
+                    </span>
+
+                    <h2>
+                        Understanding the
+                        bigger picture.
+                    </h2>
+
+                    <p>
+                        Doctology is designed to provide clear,
+                        structured and accessible information about
+                        the product and the value it provides to users.
+                    </p>
+
+                    <p>
+                        This section should contain the official
+                        description supplied by the client explaining
+                        what Doctology is and why it exists.
+                    </p>
+
+
+                    <ul class="check-list">
+
+                        <li>
+                            <span>✓</span>
+                            Clear and structured information
+                        </li>
+
+                        <li>
+                            <span>✓</span>
+                            Designed around user needs
+                        </li>
+
+                        <li>
+                            <span>✓</span>
+                            Accessible across modern devices
+                        </li>
+
+                    </ul>
+
+
+                    <a href="#solutions" class="text-link">
+                        Discover more
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 04. THE PROBLEM -->
+
+        <section class="problem section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        THE CHALLENGE
+                    </span>
+
+                    <h2>
+                        Information should not
+                        be difficult to understand.
+                    </h2>
+
+                    <p>
+                        Use this section to describe the real problems
+                        or challenges identified by the client.
+                    </p>
+
+                </div>
+
+
+                <div class="problem-grid">
+
+                    <article class="problem-card">
+
+                        <span class="card-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Information Overload
+                        </h3>
+
+                        <p>
+                            Replace this text with the actual problem
+                            experienced by the target audience.
+                        </p>
+
+                    </article>
+
+
+                    <article class="problem-card">
+
+                        <span class="card-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Lack of Clarity
+                        </h3>
+
+                        <p>
+                            Explain how unclear information affects
+                            the user's experience or decision-making.
+                        </p>
+
+                    </article>
+
+
+                    <article class="problem-card">
+
+                        <span class="card-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Difficult Decisions
+                        </h3>
+
+                        <p>
+                            Explain the consequences of the problem
+                            and why a better solution is needed.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 05. THE SOLUTION -->
+
+        <section class="solution section" id="solutions">
+
+            <div class="container solution-container">
+
+                <div class="solution-content">
+
+                    <span class="section-label">
+                        THE SOLUTION
+                    </span>
+
+                    <h2>
+                        A clearer way
+                        forward.
+                    </h2>
+
+                    <p>
+                        Explain here how Doctology addresses the
+                        challenges introduced in the previous section.
+                    </p>
+
+                    <p>
+                        This should be replaced with the official
+                        product positioning and value proposition
+                        supplied by the client.
+                    </p>
+
+                    <a href="#features" class="btn btn-primary">
+                        Explore Features
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+
+                <div class="solution-points">
+
+                    <div class="solution-point">
+
+                        <span class="solution-icon">
+                            ✓
+                        </span>
+
+                        <div>
+                            <h3>
+                                Simple
+                            </h3>
+
+                            <p>
+                                Information presented in a
+                                straightforward way.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="solution-point">
+
+                        <span class="solution-icon">
+                            ✓
+                        </span>
+
+                        <div>
+                            <h3>
+                                Structured
+                            </h3>
+
+                            <p>
+                                Content organized around what
+                                users need to know.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="solution-point">
+
+                        <span class="solution-icon">
+                            ✓
+                        </span>
+
+                        <div>
+                            <h3>
+                                Accessible
+                            </h3>
+
+                            <p>
+                                Designed to work across desktop,
+                                tablet and mobile.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 06. KEY FEATURES -->
+
+        <section class="features section" id="features">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        KEY FEATURES
+                    </span>
+
+                    <h2>
+                        Everything designed
+                        around the user.
+                    </h2>
+
+                    <p>
+                        Highlight the most important capabilities,
+                        services or features of Doctology here.
+                    </p>
+
+                </div>
+
+
+                <div class="features-grid">
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">
+                            ✦
+                        </div>
+
+                        <span class="feature-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Clear Information
+                        </h3>
+
+                        <p>
+                            Explain the first major feature
+                            or value proposition.
+                        </p>
+
+                        <a href="#" class="card-link">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">
+                            ◇
+                        </div>
+
+                        <span class="feature-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Easy to Understand
+                        </h3>
+
+                        <p>
+                            Explain how the product simplifies
+                            information for users.
+                        </p>
+
+                        <a href="#" class="card-link">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">
+                            ◎
+                        </div>
+
+                        <span class="feature-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Accessible
+                        </h3>
+
+                        <p>
+                            Explain how users can access
+                            the information or service.
+                        </p>
+
+                        <a href="#" class="card-link">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">
+                            ↗
+                        </div>
+
+                        <span class="feature-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Easy to Navigate
+                        </h3>
+
+                        <p>
+                            Highlight the simplicity of
+                            navigating the experience.
+                        </p>
+
+                        <a href="#" class="card-link">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">
+                            ◌
+                        </div>
+
+                        <span class="feature-number">
+                            05
+                        </span>
+
+                        <h3>
+                            Flexible
+                        </h3>
+
+                        <p>
+                            Explain any flexibility or
+                            scalability that is relevant.
+                        </p>
+
+                        <a href="#" class="card-link">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">
+                            +
+                        </div>
+
+                        <span class="feature-number">
+                            06
+                        </span>
+
+                        <h3>
+                            Built for Growth
+                        </h3>
+
+                        <p>
+                            Explain how the solution can evolve
+                            as requirements grow.
+                        </p>
+
+                        <a href="#" class="card-link">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 07. HOW IT WORKS -->
+
+        <section class="how-it-works section" id="how-it-works">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        HOW IT WORKS
+                    </span>
+
+                    <h2>
+                        Simple steps.
+                        Clear direction.
+                    </h2>
+
+                    <p>
+                        Explain the actual process users follow
+                        when interacting with Doctology.
+                    </p>
+
+                </div>
+
+
+                <div class="steps">
+
+                    <article class="step">
+
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <div class="step-content">
+
+                            <h3>
+                                Discover
+                            </h3>
+
+                            <p>
+                                Introduce users to Doctology
+                                and its purpose.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="step">
+
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <div class="step-content">
+
+                            <h3>
+                                Explore
+                            </h3>
+
+                            <p>
+                                Help users find the information
+                                that matters to them.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="step">
+
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <div class="step-content">
+
+                            <h3>
+                                Understand
+                            </h3>
+
+                            <p>
+                                Present relevant information
+                                clearly and simply.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="step">
+
+                        <span class="step-number">
+                            04
+                        </span>
+
+                        <div class="step-content">
+
+                            <h3>
+                                Take Action
+                            </h3>
+
+                            <p>
+                                Give users a clear next step
+                                based on their needs.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--  08. BENEFITS / VALUE -->
+
+        <section class="benefits section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        WHY DOCTOLOGY
+                    </span>
+
+                    <h2>
+                        Designed to make
+                        information work better.
+                    </h2>
+
+                </div>
+
+
+                <div class="benefits-grid">
+
+                    <article class="benefit-card">
+
+                        <span class="benefit-icon">
+                            ✓
+                        </span>
+
+                        <h3>
+                            Clarity
+                        </h3>
+
+                        <p>
+                            Help users understand important
+                            information without unnecessary complexity.
+                        </p>
+
+                    </article>
+
+
+                    <article class="benefit-card">
+
+                        <span class="benefit-icon">
+                            ✓
+                        </span>
+
+                        <h3>
+                            Confidence
+                        </h3>
+
+                        <p>
+                            Give users the information they need
+                            to move forward with confidence.
+                        </p>
+
+                    </article>
+
+
+                    <article class="benefit-card">
+
+                        <span class="benefit-icon">
+                            ✓
+                        </span>
+
+                        <h3>
+                            Accessibility
+                        </h3>
+
+                        <p>
+                            Provide a consistent experience
+                            across different screen sizes.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 09. USE CASE / WHO IT'S FOR -->
+
+        <section class="audience section">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        WHO IT'S FOR
+                    </span>
+
+                    <h2>
+                        Designed for the people
+                        who need it most.
+                    </h2>
+
+                    <p>
+                        Replace these audience categories with
+                        the actual target users identified by the client.
+                    </p>
+
+                </div>
+
+
+                <div class="audience-grid">
+
+                    <article class="audience-card">
+
+                        <span class="audience-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Audience One
+                        </h3>
+
+                        <p>
+                            Description of this audience
+                            and their specific needs.
+                        </p>
+
+                        <a href="#" class="text-link">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+
+                    <article class="audience-card">
+
+                        <span class="audience-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Audience Two
+                        </h3>
+
+                        <p>
+                            Description of this audience
+                            and their specific needs.
+                        </p>
+
+                        <a href="#" class="text-link">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+
+                    <article class="audience-card">
+
+                        <span class="audience-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Audience Three
+                        </h3>
+
+                        <p>
+                            Description of this audience
+                            and their specific needs.
+                        </p>
+
+                        <a href="#" class="text-link">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 10. TESTIMONIAL / SOCIAL PROOF -->
+
+        <section class="testimonial section">
+
+            <div class="container testimonial-container">
+
+                <span class="section-label">
+                    SOCIAL PROOF
+                </span>
+
+                <blockquote>
+
+                    <span class="quote-mark">
+                        “
+                    </span>
+
+                    <p>
+                        Add a genuine client testimonial,
+                        customer statement or approved social
+                        proof here.
+                    </p>
+
+                    <footer>
+
+                        <strong>
+                            Client Name
+                        </strong>
+
+                        <span>
+                            Role / Organization
+                        </span>
+
+                    </footer>
+
+                </blockquote>
+
+            </div>
+
+        </section>
+
+
+        <!-- 11. RESOURCES / ARTICLES -->
+
+        <section class="resources section" id="resources">
+
+            <div class="container">
+
+                <div class="section-heading resources-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            RESOURCES
+                        </span>
+
+                        <h2>
+                            Explore our latest
+                            information.
+                        </h2>
+
+                    </div>
+
+                    <a href="#" class="text-link">
+                        View all resources →
+                    </a>
+
+                </div>
+
+
+                <div class="resources-grid">
+
+                    <article class="resource-card">
+
+                        <div class="resource-image">
+                            <span>
+                                ARTICLE
+                            </span>
+                        </div>
+
+                        <div class="resource-content">
+
+                            <span class="resource-category">
+                                ARTICLE
+                            </span>
+
+                            <h3>
+                                Understanding Doctology
+                            </h3>
+
+                            <p>
+                                A short introduction to the
+                                product and what it provides.
+                            </p>
+
+                            <a href="#" class="card-link">
+                                Read article →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="resource-card">
+
+                        <div class="resource-image">
+                            <span>
+                                GUIDE
+                            </span>
+                        </div>
+
+                        <div class="resource-content">
+
+                            <span class="resource-category">
+                                GUIDE
+                            </span>
+
+                            <h3>
+                                Getting Started
+                            </h3>
+
+                            <p>
+                                Useful information for users
+                                who are discovering Doctology.
+                            </p>
+
+                            <a href="#" class="card-link">
+                                Read guide →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="resource-card">
+
+                        <div class="resource-image">
+                            <span>
+                                INSIGHT
+                            </span>
+                        </div>
+
+                        <div class="resource-content">
+
+                            <span class="resource-category">
+                                INSIGHT
+                            </span>
+
+                            <h3>
+                                What You Should Know
+                            </h3>
+
+                            <p>
+                                Helpful information and insights
+                                related to Doctology.
+                            </p>
+
+                            <a href="#" class="card-link">
+                                Read more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--  12. FAQ -->
+
+        <section class="faq section" id="faq">
+
+            <div class="container faq-container">
+
+                <div class="faq-intro">
+
+                    <span class="section-label">
+                        FAQ
+                    </span>
+
+                    <h2>
+                        Frequently asked
+                        questions.
+                    </h2>
+
+                    <p>
+                        Find answers to common questions about
+                        Doctology.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-list">
+
+                    <details class="faq-item">
+
+                        <summary>
+                            What is Doctology?
+                            <span aria-hidden="true">+</span>
+                        </summary>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Add the official answer supplied
+                                by the client here.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Who is Doctology for?
+                            <span aria-hidden="true">+</span>
+                        </summary>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Add the official target audience
+                                information here.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            How does Doctology work?
+                            <span aria-hidden="true">+</span>
+                        </summary>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Add the official explanation of
+                                the process here.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            How can I get started?
+                            <span aria-hidden="true">+</span>
+                        </summary>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Add the official onboarding or
+                                contact information here.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--  13. FINAL CTA -->
+
+        <section class="final-cta section" id="contact">
+
+            <div class="container">
+
+                <div class="final-cta-content">
+
+                    <span class="section-label">
+                        GET STARTED
+                    </span>
+
+                    <h2>
+                        Ready to learn
+                        more?
+                    </h2>
+
+                    <p>
+                        Discover more about Doctology and find
+                        the information you need.
+                    </p>
+
+                    <a href="#" class="btn btn-light">
+                        Get Started
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!--  FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <a href="#home">
+                    <img
+                        src="image/navyLogo.svg"
+                        alt="Doctology Logo">
+                </a>
+
+                <p>
+                    Clear information.
+                    Better understanding.
+                </p>
+
+            </div>
+
+
+            <!-- Company -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#solutions">
+                    Solutions
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Resources -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Resources
+                </h3>
+
+                <a href="#resources">
+                    Articles
+                </a>
+
+                <a href="#resources">
+                    Guides
+                </a>
+
+                <a href="#faq">
+                    FAQ
+                </a>
+
+            </div>
+
+
+            <!-- Legal -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Legal
+                </h3>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container footer-bottom-container">
+
+                <p>
+                    © 2026 Doctology. All rights reserved.
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="#" aria-label="LinkedIn">
+                        LinkedIn
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        Instagram
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
